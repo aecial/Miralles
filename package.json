@@ -5,5 +5,9 @@
   },
   "scripts": {
     "tailwind": "npx tailwindcss -i ./input.css -o ./output.css --watch"
+  },
+  "dependencies": {
+    "@preline/carousel": "^2.3.0",
+    "preline": "^2.3.0"
   }
 }

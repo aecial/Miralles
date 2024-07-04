@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./output.css" />
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
-  <body>
+  <body class="main">
     <header>
       <nav class="bg-transparent mt-10 h-32 flex items-center absolute z-20">
         <div
@@ -53,6 +53,73 @@
         <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
       </nav>
     </header>
-    <main></main>
+    <main class="h-screen bg-red-500">
+      <div class="w-screen h-screen bg-white shadow-md dark:bg-neutral-800">
+        <div
+          data-hs-carousel='{
+            "loadingClasses": "opacity-0"
+          }'
+          class="relative"
+        >
+          <div
+            class="hs-carousel relative overflow-hidden w-full h-screen bg-white"
+          >
+            <div
+              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
+            >
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-100 dark:bg-neutral-900"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
+                    ><img src="./assets/try.jpg" alt="try1"
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-200 dark:bg-neutral-800"
+                >
+                  <span
+                    class="self-center text-4xl bg-red-500 text-gray-800 transition duration-700 dark:text-white"
+                    ><img
+                      src="./assets/try2.jpg"
+                      alt="try2"
+                      class="w-screen h-screen"
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
+                    ><img src="./assets/try3.jpg" alt="try3"
+                  /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"
+          >
+            <span
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+            ></span>
+            <span
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+            ></span>
+            <span
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
   </body>
 </html>
