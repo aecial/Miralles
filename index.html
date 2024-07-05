@@ -14,7 +14,7 @@
           class="bg-transparent w-screen flex items-center justify-between px-24"
         >
           <div>
-            <div class="avatar">
+            <a class="avatar" href="index.html">
               <div class="w-32 rounded-full">
                 <img
                   src="./assets/mirallesLogo.png"
@@ -22,13 +22,21 @@
                   class="rounded-full"
                 />
               </div>
-            </div>
+            </a>
           </div>
           <div class="flex gap-16">
-            <a class="link link-hover text-black text-lg">Miralles Resort</a>
-            <a class="link link-hover text-black text-lg">Gallery</a>
-            <a class="link link-hover text-black text-lg">Reviews</a>
-            <a class="link link-hover text-black text-lg">Contact Us</a>
+            <a class="link link-hover text-black text-lg link-active"
+              >Miralles Resort</a
+            >
+            <a class="link link-hover text-black text-lg" href="gallery.html"
+              >Gallery</a
+            >
+            <a class="link link-hover text-black text-lg" href="reviews.html"
+              >Reviews</a
+            >
+            <a class="link link-hover text-black text-lg" href="contact-us.html"
+              >Contact Us</a
+            >
           </div>
           <div>
             <button class="btn btn-primary text-white text-lg">
@@ -120,6 +128,9 @@
       </div>
     </main>
     <script src="./index.js"></script>
-    <script src="./node_modules/preline/dist/preline.js"></script>
+    <!-- <script src="./node_modules/preline/dist/preline.js"></script> -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js
+    "></script>
   </body>
 </html>
