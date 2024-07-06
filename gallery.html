@@ -63,8 +63,59 @@
         <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
       </nav>
     </header>
-    <main class="main-height p-5 bg-red-500">
-      <h1 class="text-4xl">Romr</h1>
+    <main class="main-height p-5 bg-transparent">
+      <h1 class="text-3xl text-center uppercase">Photo Gallery</h1>
+      <div class="mt-2 h-[32rem] flex flex-col">
+        <div
+          class="flex gap-7 justify-center border border-t border-b border-l-0 border-r-0 font-semibold text-sm py-2"
+        >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Overview</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Coffee Corner</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Bar and Play Lounge</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Lobby Area</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Tipi Rooms</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Swimming Pool and Jacuzzi</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Go Kart, Playground and Unwind</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Gazebos Snack Bar</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Grill and Eat</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Bonfire Camp</a
+          >
+          <a class="link link-hover hover:text-primary hover:font-bold"
+            >Miralles Farm</a
+          >
+        </div>
+        <div
+          id="photoDiv"
+          class="h-full p-4 grid grid-cols-6 justify-items-center overflow-y-scroll gap-10"
+        >
+          <!-- <button class="bg-red-500 w-36 h-36 overflow-hidden cursor-pointer">
+            <img
+              src="./assets/a1.jpg"
+              class="h-full w-full object-cover transform transition duration-500 hover:scale-125"
+            />
+          </button> -->
+        </div>
+      </div>
     </main>
+    <script src="./gallery.js"></script>
   </body>
 </html>

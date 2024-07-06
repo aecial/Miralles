@@ -9,7 +9,7 @@
   </head>
   <body class="main">
     <header>
-      <nav class="bg-transparent mt-10 h-32 flex items-center absolute z-20">
+      <nav class="bg-transparent mt-10 h-32 flex items-center absolute z-[21]">
         <div
           class="bg-transparent w-screen flex items-center justify-between px-24"
         >
@@ -64,6 +64,17 @@
     <main class="h-screen bg-red-500">
       <div class="w-screen h-screen bg-white shadow-md dark:bg-neutral-800">
         <div
+          id="overlay"
+          class="absolute z-[19] h-screen w-screen bg-slate-800 opacity-[0.50]"
+        ></div>
+        <div
+          id="overlay2"
+          class="absolute z-20 h-screen w-screen flex flex-col justify-center items-center text-white"
+        >
+          <h3 class="text-[2rem]">Welcome to</h3>
+          <h1 class="text-[6rem]">Miralles Resort</h1>
+        </div>
+        <div
           data-hs-carousel='{
             "loadingClasses": "opacity-0"
           }'
@@ -108,20 +119,48 @@
                   /></span>
                 </div>
               </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
+                    ><img src="./assets/try4.jpg" alt="try4"
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
+                    ><img src="./assets/try5.jpg" alt="try5"
+                  /></span>
+                </div>
+              </div>
             </div>
           </div>
 
           <div
-            class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"
+            id="paginationBtn"
+            class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2 z-20"
+            onclick="paginationClick()"
           >
             <span
-              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 bg-white rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
             ></span>
             <span
-              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 bg-white rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
             ></span>
             <span
-              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 bg-white rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+            ></span>
+            <span
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 bg-white rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
+            ></span>
+            <span
+              class="hs-carousel-active:bg-primary hs-carousel-active:border-primary size-3 border border-gray-400 bg-white rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-primary dark:hs-carousel-active:border-primary"
             ></span>
           </div>
         </div>
@@ -132,5 +171,13 @@
     <script src="
     https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js
     "></script>
+    <script>
+      function paginationClick() {
+        let overlay = document.getElementById("overlay");
+        let overlay2 = document.getElementById("overlay2");
+        overlay.hidden = true;
+        overlay2.classList.add("hidden");
+      }
+    </script>
   </body>
 </html>

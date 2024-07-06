@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: gray;
+  background-color: #d8decc;
 }
 .main-height {
   height: calc(100vh - 10.5rem);
