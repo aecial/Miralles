@@ -69,39 +69,45 @@
         <div
           class="flex gap-7 justify-center border border-t border-b border-l-0 border-r-0 font-semibold text-sm py-2"
         >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Overview</a
+          <p
+            onclick="changePics(0)"
+            class="link link-hover hover:text-primary hover:font-bold"
           >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Coffee Corner</a
+            Overview
+          </p>
+          <p
+            onclick="changePics(1)"
+            class="link link-hover hover:text-primary hover:font-bold"
           >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Bar and Play Lounge</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Lobby Area</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Tipi Rooms</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Swimming Pool and Jacuzzi</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Go Kart, Playground and Unwind</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Gazebos Snack Bar</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Grill and Eat</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Bonfire Camp</a
-          >
-          <a class="link link-hover hover:text-primary hover:font-bold"
-            >Miralles Farm</a
-          >
+            Coffee Corner
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Bar and Play Lounge
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Lobby Area
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Tipi Rooms
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Swimming Pool and Jacuzzi
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Go Kart, Playground and Unwind
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Gazebos Snack Bar
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Grill and Eat
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Bonfire Camp
+          </p>
+          <p class="link link-hover hover:text-primary hover:font-bold">
+            Miralles Farm
+          </p>
         </div>
         <div
           id="photoDiv"
@@ -116,6 +122,57 @@
         </div>
       </div>
     </main>
+
+    <dialog id="my_modal_1" class="modal">
+      <div class="flex gap-10 justify-center items-center">
+        <button id="prevBtn" class="btn btn-primary text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z"
+            />
+          </svg>
+        </button>
+        <div class="modal-box bg-white">
+          <img
+            id="nowShowing"
+            src="./assets/try.jpg"
+            class="h-96 w-[80vw] object-cover"
+          />
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn btn-primary">Close</button>
+            </form>
+          </div>
+        </div>
+        <button id="nextBtn" class="btn btn-primary text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </dialog>
     <script src="./gallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>
   </body>
 </html>
