@@ -112,18 +112,14 @@
         <div
           id="photoDiv"
           class="h-full p-4 grid grid-cols-6 justify-items-center overflow-y-scroll gap-10"
-        >
-          <!-- <button class="bg-red-500 w-36 h-36 overflow-hidden cursor-pointer">
-            <img
-              src="./assets/a1.jpg"
-              class="h-full w-full object-cover transform transition duration-500 hover:scale-125"
-            />
-          </button> -->
-        </div>
+        ></div>
       </div>
     </main>
 
     <dialog id="my_modal_1" class="modal">
+      <form method="dialog">
+        <button class="text-white absolute right-20 top-10 text-xl">X</button>
+      </form>
       <div class="flex gap-10 justify-center items-center">
         <button id="prevBtn" class="btn btn-primary text-white">
           <svg
@@ -141,18 +137,12 @@
             />
           </svg>
         </button>
-        <div class="modal-box bg-white">
+        <div>
           <img
             id="nowShowing"
             src="./assets/try.jpg"
-            class="h-96 w-[80vw] object-cover"
+            class="h-[34rem] w-[80vw] object-contain"
           />
-          <div class="modal-action">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn btn-primary">Close</button>
-            </form>
-          </div>
         </div>
         <button id="nextBtn" class="btn btn-primary text-white">
           <svg
@@ -173,6 +163,5 @@
       </div>
     </dialog>
     <script src="./gallery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>
   </body>
 </html>
