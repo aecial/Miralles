@@ -1,52 +1,95 @@
-<nav class="bg-transparent lg:mt-10 mt-5 h-32 flex items-center z-[21]">
+<header>
+  <nav class="bg-transparent lg:mt-10 mt-5 h-32 flex items-center z-[21]">
+    <div
+      class="bg-transparent w-screen flex items-center justify-between lg:px-24 px-6"
+    >
+      <div>
+        <a class="avatar" href="index.html">
+          <div class="lg:w-32 w-20 rounded-full">
+            <img
+              src="./assets/mirallesLogo.png"
+              alt="logo"
+              class="rounded-full"
+            />
+          </div>
+        </a>
+      </div>
+      <div class="lg:hidden" onclick="clicked()">
+        <label id="myHamburger" class="swap mt-1 swap-rotate">
+          <!-- this hidden checkbox controls the state
+          <input id="myHamburger" type="checkbox" /> -->
+
+          <!-- hamburger icon -->
+          <svg
+            class="swap-off"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+
+          <!-- close icon -->
+          <svg
+            class="swap-on bg-transparent"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <polygon
+              points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+            />
+          </svg>
+        </label>
+      </div>
+      <div class="hidden gap-16 lg:flex">
+        <a class="link link-hover text-black text-lg" href="./index.html"
+          >Miralles Resort</a
+        >
+        <a
+          class="link link-hover text-black text-lg link-active"
+          href="gallery.html"
+          >Gallery</a
+        >
+        <a class="link link-hover text-black text-lg" href="reviews.html"
+          >Reviews</a
+        >
+        <a class="link link-hover text-black text-lg" href="contact-us.html"
+          >Contact Us</a
+        >
+      </div>
+      <div class="hidden lg:block">
+        <button class="btn btn-primary text-white text-lg">
+          Follow Us
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11.097 1.515a.75.75 0 0 1 .589.882L10.666 7.5h4.47l1.079-5.397a.75.75 0 1 1 1.47.294L16.665 7.5h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.2 6h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103h-4.47l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103H3.75a.75.75 0 0 1 0-1.5h3.885l1.2-6H5.25a.75.75 0 0 1 0-1.5h3.885l1.08-5.397a.75.75 0 0 1 .882-.588ZM10.365 9l-1.2 6h4.47l1.2-6h-4.47Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
+  </nav>
   <div
-    class="bg-transparent w-screen flex items-center justify-between lg:px-24 px-6"
+    id="navbarDiv"
+    class="hidden animate-slide-down w-36 flex-col gap-0 text-xs h-auto absolute z-20 bg-white top-[6rem] right-6 shadow-sm shadow-[#C69B6D]"
   >
-    <div>
-      <a class="avatar" href="index.html">
-        <div class="lg:w-32 w-20 rounded-full">
-          <img
-            src="./assets/mirallesLogo.png"
-            alt="logo"
-            class="rounded-full"
-          />
-        </div>
-      </a>
-    </div>
-    <div class="lg:hidden" onclick="clicked()">
-      <label id="myHamburger" class="swap mt-1 swap-rotate">
-        <!-- this hidden checkbox controls the state
-        <input id="myHamburger" type="checkbox" /> -->
-
-        <!-- hamburger icon -->
-        <svg
-          class="swap-off"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 512 512"
-        >
-          <path
-            d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
-          />
-        </svg>
-
-        <!-- close icon -->
-        <svg
-          class="swap-on bg-transparent"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 512 512"
-        >
-          <polygon
-            points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
-          />
-        </svg>
-      </label>
-    </div>
-    <div class="hidden gap-16 lg:flex">
-      <a class="link link-hover text-black text-lg" href="index.html"
+    <div class="flex flex-col p-2">
+      <a class="link link-hover text-black text-lg" href="./index.html"
         >Miralles Resort</a
       >
       <a
@@ -61,40 +104,32 @@
         >Contact Us</a
       >
     </div>
-    <div class="hidden lg:block">
-      <button class="btn btn-primary text-white text-lg">
-        Follow Us
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M11.097 1.515a.75.75 0 0 1 .589.882L10.666 7.5h4.47l1.079-5.397a.75.75 0 1 1 1.47.294L16.665 7.5h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.2 6h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103h-4.47l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103H3.75a.75.75 0 0 1 0-1.5h3.885l1.2-6H5.25a.75.75 0 0 1 0-1.5h3.885l1.08-5.397a.75.75 0 0 1 .882-.588ZM10.365 9l-1.2 6h4.47l1.2-6h-4.47Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
+    <a
+      class="bg-primary text-white h-[35px] w-[50%] relative left-[4.5rem] rounded-l-md flex justify-center items-center mt-4"
+    >
+      <svg
+        width="30px"
+        height="30px"
+        viewBox="-2.4 -2.4 28.80 28.80"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z"
+            fill="#ffffff"
+          ></path>
+        </g>
+      </svg>
+    </a>
+    <span class="invisible">.</span>
   </div>
-  <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
-</nav>
-<div
-  id="navbarDiv"
-  class="hidden animate-slide-down w-36 flex-col gap-0 text-xs h-auto absolute z-20 bg-white top-[6rem] right-6 p-2 shadow-sm shadow-[#C69B6D]"
->
-  <a class="link link-hover text-black text-lg" href="index.html"
-    >Miralles Resort</a
-  >
-  <a class="link link-hover text-black text-lg link-active" href="gallery.html"
-    >Gallery</a
-  >
-  <a class="link link-hover text-black text-lg" href="reviews.html">Reviews</a>
-  <a class="link link-hover text-black text-lg" href="contact-us.html"
-    >Contact Us</a
-  >
-</div>
+</header>
