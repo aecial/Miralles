@@ -9,13 +9,15 @@
   </head>
   <body class="main">
     <header>
-      <nav class="bg-transparent mt-10 h-32 flex items-center absolute z-[21]">
+      <nav
+        class="bg-transparent lg:mt-10 mt-5 h-32 flex items-center absolute z-[21]"
+      >
         <div
-          class="bg-transparent w-screen flex items-center justify-between px-24"
+          class="bg-transparent w-screen flex items-center justify-between lg:px-24 px-6"
         >
           <div>
             <a class="avatar" href="index.html">
-              <div class="w-32 rounded-full">
+              <div class="lg:w-32 w-20 rounded-full">
                 <img
                   src="./assets/mirallesLogo.png"
                   alt="logo"
@@ -24,7 +26,39 @@
               </div>
             </a>
           </div>
-          <div class="flex gap-16">
+          <div class="lg:hidden" onclick="clicked()">
+            <label id="myHamburger" class="swap mt-1 swap-rotate">
+              <!-- this hidden checkbox controls the state
+              <input id="myHamburger" type="checkbox" /> -->
+
+              <!-- hamburger icon -->
+              <svg
+                class="swap-off"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                />
+              </svg>
+
+              <!-- close icon -->
+              <svg
+                class="swap-on bg-transparent"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <polygon
+                  points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                />
+              </svg>
+            </label>
+          </div>
+          <div class="hidden gap-16 lg:flex">
             <a class="link link-hover text-black text-lg link-active"
               >Miralles Resort</a
             >
@@ -38,7 +72,7 @@
               >Contact Us</a
             >
           </div>
-          <div>
+          <div class="hidden lg:block">
             <button class="btn btn-primary text-white text-lg">
               Follow Us
               <span>
@@ -60,19 +94,36 @@
         </div>
         <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
       </nav>
+      <div
+        id="navbarDiv"
+        class="hidden animate-slide-down w-36 flex-col gap-0 text-xs h-auto absolute z-20 bg-white top-[6rem] right-6 p-2 shadow-sm shadow-[#C69B6D]"
+      >
+        <a class="link link-hover text-black text-lg link-active"
+          >Miralles Resort</a
+        >
+        <a class="link link-hover text-black text-lg" href="gallery.html"
+          >Gallery</a
+        >
+        <a class="link link-hover text-black text-lg" href="reviews.html"
+          >Reviews</a
+        >
+        <a class="link link-hover text-black text-lg" href="contact-us.html"
+          >Contact Us</a
+        >
+      </div>
     </header>
-    <main class="h-screen bg-red-500">
+    <main onclick="paginationClick()" class="h-screen bg-red-500">
       <div class="w-screen h-screen bg-white shadow-md dark:bg-neutral-800">
         <div
           id="overlay"
-          class="absolute z-[19] h-screen w-screen bg-slate-800 opacity-[0.50]"
+          class="absolute z-[17] h-screen w-screen bg-slate-800 opacity-[0.50]"
         ></div>
         <div
           id="overlay2"
-          class="absolute z-20 h-screen w-screen flex flex-col justify-center items-center text-white"
+          class="absolute z-[18] h-screen w-screen flex flex-col justify-center items-center text-white"
         >
-          <h3 class="text-[2rem]">Welcome to</h3>
-          <h1 class="text-[6rem]">Miralles Resort</h1>
+          <h3 class="lg:text-[2rem] text-lg lg:mb-10">Welcome to</h3>
+          <h1 class="lg:text-[6rem] text-4xl">Miralles Resort</h1>
         </div>
         <div
           data-hs-carousel='{
@@ -91,8 +142,11 @@
                   class="flex justify-center h-full bg-gray-100 dark:bg-neutral-900"
                 >
                   <span
-                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
-                    ><img src="./assets/try.jpg" alt="try1"
+                    class="self-center text-gray-800 transition duration-700 dark:text-white"
+                    ><img
+                      src="./assets/try.jpg"
+                      alt="try1"
+                      class="w-screen h-screen object-cover"
                   /></span>
                 </div>
               </div>
@@ -101,11 +155,37 @@
                   class="flex justify-center h-full bg-gray-200 dark:bg-neutral-800"
                 >
                   <span
-                    class="self-center text-4xl bg-red-500 text-gray-800 transition duration-700 dark:text-white"
+                    class="self-center bg-red-500 text-gray-800 transition duration-700 dark:text-white"
                     ><img
                       src="./assets/try2.jpg"
                       alt="try2"
-                      class="w-screen h-screen"
+                      class="w-screen h-screen object-cover"
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-gray-800 transition duration-700 dark:text-white"
+                    ><img
+                      src="./assets/try3.jpg"
+                      alt="try3"
+                      class="w-screen h-screen object-cover"
+                  /></span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide">
+                <div
+                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-gray-800 transition duration-700 dark:text-white"
+                    ><img
+                      src="./assets/try4.jpg"
+                      alt="try4"
+                      class="w-screen h-screen object-cover"
                   /></span>
                 </div>
               </div>
@@ -115,27 +195,10 @@
                 >
                   <span
                     class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
-                    ><img src="./assets/try3.jpg" alt="try3"
-                  /></span>
-                </div>
-              </div>
-              <div class="hs-carousel-slide">
-                <div
-                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
-                >
-                  <span
-                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
-                    ><img src="./assets/try4.jpg" alt="try4"
-                  /></span>
-                </div>
-              </div>
-              <div class="hs-carousel-slide">
-                <div
-                  class="flex justify-center h-full bg-gray-300 dark:bg-neutral-700"
-                >
-                  <span
-                    class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"
-                    ><img src="./assets/try5.jpg" alt="try5"
+                    ><img
+                      src="./assets/try5.jpg"
+                      alt="try5"
+                      class="w-screen h-screen object-cover"
                   /></span>
                 </div>
               </div>

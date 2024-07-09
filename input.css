@@ -12,3 +12,20 @@
   color: #c69b6d;
   font-weight: bold;
 }
+
+@layer utilities {
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-10px); /* Start 10px above */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* End at the original position */
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+}

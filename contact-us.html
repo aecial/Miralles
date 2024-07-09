@@ -9,13 +9,13 @@
   </head>
   <body>
     <header>
-      <nav class="bg-transparent mt-10 h-32 flex items-center z-20">
+      <nav class="bg-transparent lg:mt-10 mt-5 h-32 flex items-center z-[21]">
         <div
-          class="bg-transparent w-screen flex items-center justify-between px-24"
+          class="bg-transparent w-screen flex items-center justify-between lg:px-24 px-6"
         >
           <div>
             <a class="avatar" href="index.html">
-              <div class="w-32 rounded-full">
+              <div class="lg:w-32 w-20 rounded-full">
                 <img
                   src="./assets/mirallesLogo.png"
                   alt="logo"
@@ -24,7 +24,39 @@
               </div>
             </a>
           </div>
-          <div class="flex gap-16">
+          <div class="lg:hidden" onclick="clicked()">
+            <label id="myHamburger" class="swap mt-1 swap-rotate">
+              <!-- this hidden checkbox controls the state
+              <input id="myHamburger" type="checkbox" /> -->
+
+              <!-- hamburger icon -->
+              <svg
+                class="swap-off"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                />
+              </svg>
+
+              <!-- close icon -->
+              <svg
+                class="swap-on bg-transparent"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <polygon
+                  points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                />
+              </svg>
+            </label>
+          </div>
+          <div class="hidden gap-16 lg:flex">
             <a class="link link-hover text-black text-lg" href="index.html"
               >Miralles Resort</a
             >
@@ -40,7 +72,7 @@
               >Contact Us</a
             >
           </div>
-          <div>
+          <div class="hidden lg:block">
             <button class="btn btn-primary text-white text-lg">
               Follow Us
               <span>
@@ -62,9 +94,29 @@
         </div>
         <div class="bg-white text-black absolute w-screen -z-10 h-8"></div>
       </nav>
+      <div
+        id="navbarDiv"
+        class="hidden animate-slide-down w-36 flex-col gap-0 text-xs h-auto absolute z-20 bg-white top-[6rem] right-6 p-2 shadow-sm shadow-[#C69B6D]"
+      >
+        <a class="link link-hover text-black text-lg" href="index.html"
+          >Miralles Resort</a
+        >
+        <a class="link link-hover text-black text-lg" href="gallery.html"
+          >Gallery</a
+        >
+        <a class="link link-hover text-black text-lg" href="reviews.html"
+          >Reviews</a
+        >
+        <a
+          class="link link-hover text-black text-lg link-active"
+          href="contact-us.html"
+          >Contact Us</a
+        >
+      </div>
     </header>
     <main class="main-height p-5 bg-red-500">
       <h1 class="text-4xl">Romr</h1>
     </main>
+    <script src="./contact.js"></script>
   </body>
 </html>
