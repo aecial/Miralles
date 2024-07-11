@@ -82,18 +82,24 @@ let titleCollection = [
 const container = document.getElementById("photoDiv");
 const modalDiv = document.getElementById("modalDiv");
 const nowShowing = document.getElementById("nowShowing");
+const nowShowing2 = document.getElementById("nowShowing2");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+const prevBtn2 = document.getElementById("prevBtn2");
+const nextBtn2 = document.getElementById("nextBtn2");
 let currentIndex = 0;
 let currentPhotoIndex = 0;
 
 document.addEventListener("DOMContentLoaded", (event) => {
   changePics(0);
 });
-
+const mobileSelect = document.getElementById("mobileSelect");
+mobileSelect.addEventListener("change", () => {
+  changePics(Number(mobileSelect.value));
+});
 function changePics(index) {
-  let title = document.getElementById("galleryTitle");
-  let icon = document.getElementById("gallerySvg");
+  let title = document.getElementById("galleryTitle") || null;
+  let icon = document.getElementById("gallerySvg") || null;
   title.innerHTML = titleCollection[index].name;
   icon.innerHTML = titleCollection[index].svg;
 
@@ -101,7 +107,9 @@ function changePics(index) {
   currentIndex = index;
   photoCollection[index].forEach((photo, idx) => {
     const picBtn = document.createElement("button");
-    picBtn.className = ["bg-red-500 w-36 h-36 overflow-hidden cursor-pointer"];
+    picBtn.className = [
+      "w-28 h-28 md:w-36 md:h-36 overflow-hidden cursor-pointer",
+    ];
     picBtn.addEventListener("click", () => {
       currentPhotoIndex = idx;
       nowShowing.src = photo;
@@ -130,6 +138,17 @@ prevBtn.addEventListener("click", () => {
     (currentPhotoIndex - 1 + photoCollection[currentIndex].length) %
     photoCollection[currentIndex].length;
   nowShowing.src = photoCollection[currentIndex][currentPhotoIndex];
+});
+nextBtn2.addEventListener("click", () => {
+  currentPhotoIndex =
+    (currentPhotoIndex + 1) % photoCollection[currentIndex].length;
+  nowShowing2.src = photoCollection[currentIndex][currentPhotoIndex];
+});
+prevBtn2.addEventListener("click", () => {
+  currentPhotoIndex =
+    (currentPhotoIndex - 1 + photoCollection[currentIndex].length) %
+    photoCollection[currentIndex].length;
+  nowShowing2.src = photoCollection[currentIndex][currentPhotoIndex];
 });
 
 const hamburgerBtn = document.getElementById("myHamburger");
