@@ -89,6 +89,8 @@ const prevBtn2 = document.getElementById("prevBtn2");
 const nextBtn2 = document.getElementById("nextBtn2");
 let currentIndex = 0;
 let currentPhotoIndex = 0;
+let currentIndex2 = 0;
+let currentPhotoIndex2 = 0;
 
 document.addEventListener("DOMContentLoaded", (event) => {
   changePics(0);
@@ -105,6 +107,7 @@ function changePics(index) {
 
   container.innerHTML = "";
   currentIndex = index;
+  currentIndex2 = index;
   photoCollection[index].forEach((photo, idx) => {
     const picBtn = document.createElement("button");
     picBtn.className = [
@@ -112,6 +115,7 @@ function changePics(index) {
     ];
     picBtn.addEventListener("click", () => {
       currentPhotoIndex = idx;
+      currentPhotoIndex2 = idx;
       nowShowing.src = photo;
       my_modal_1.showModal();
     });
@@ -140,15 +144,15 @@ prevBtn.addEventListener("click", () => {
   nowShowing.src = photoCollection[currentIndex][currentPhotoIndex];
 });
 nextBtn2.addEventListener("click", () => {
-  currentPhotoIndex =
-    (currentPhotoIndex + 1) % photoCollection[currentIndex].length;
-  nowShowing2.src = photoCollection[currentIndex][currentPhotoIndex];
+  currentPhotoIndex2 =
+    (currentPhotoIndex2 + 1) % photoCollection[currentIndex2].length;
+  nowShowing2.src = photoCollection[currentIndex2][currentPhotoIndex2];
 });
 prevBtn2.addEventListener("click", () => {
-  currentPhotoIndex =
-    (currentPhotoIndex - 1 + photoCollection[currentIndex].length) %
-    photoCollection[currentIndex].length;
-  nowShowing2.src = photoCollection[currentIndex][currentPhotoIndex];
+  currentPhotoIndex2 =
+    (currentPhotoIndex2 - 1 + photoCollection[currentIndex2].length) %
+    photoCollection[currentIndex2].length;
+  nowShowing2.src = photoCollection[currentIndex2][currentPhotoIndex2];
 });
 
 const hamburgerBtn = document.getElementById("myHamburger");
