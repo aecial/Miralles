@@ -117,6 +117,7 @@ function changePics(index) {
       currentPhotoIndex = idx;
       currentPhotoIndex2 = idx;
       nowShowing.src = photo;
+      nowShowing2.src = photo;
       my_modal_1.showModal();
     });
 
