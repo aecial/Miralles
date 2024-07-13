@@ -11,12 +11,12 @@ let photoCollection = [
     "./assets/overview/ov9.jpg",
   ],
   [
-    "./assets/coffee/cc1.jpg",
+    "./assets/overview/ov6.jpg",
     "./assets/coffee/cc2.jpg",
     "./assets/coffee/cc3.jpg",
     "./assets/coffee/cc4.jpg",
     "./assets/coffee/cc5.jpg",
-    "./assets/coffee/cc6.jpg",
+    "./assets/overview/ov1.jpg",
     "./assets/coffee/cc7.jpg",
     "./assets/coffee/cc8.jpg",
     "./assets/coffee/cc9.jpg",
@@ -32,6 +32,11 @@ let photoCollection = [
     "./assets/coffee/cc19.jpg",
     "./assets/coffee/cc20.jpg",
     "./assets/coffee/cc21.jpg",
+    "./assets/coffee/cc22.jpg",
+    "./assets/coffee/cc23.jpg",
+    "./assets/coffee/cc24.jpg",
+    "./assets/coffee/cc25.jpg",
+    "./assets/coffee/cc26.jpg",
   ],
 ];
 
