@@ -5,21 +5,13 @@ module.exports = {
       {
         mytheme: {
           primary: "#C69B6D",
-
           secondary: "#ff00ff",
-
           accent: "#FFDCB6",
-
           neutral: "#D8DECC",
-
           "base-100": "#ff00ff",
-
           info: "#0000ff",
-
           success: "#4D563A",
-
           warning: "#00ff00",
-
           error: "#ff0000",
         },
       },
@@ -27,7 +19,11 @@ module.exports = {
   },
   content: ["./*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inria Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [require("daisyui"), require("preline/plugin")],
 };
