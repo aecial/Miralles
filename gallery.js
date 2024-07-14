@@ -93,6 +93,49 @@ for (let i = 1; i <= 81; i++) {
   tipiCollection.push(`./assets/tipi/tp${i}.jpg`);
 }
 photoCollection.push(tipiCollection);
+
+let poolCollection = [];
+
+for (let i = 1; i <= 70; i++) {
+  poolCollection.push(`./assets/pool/pl${i}.jpg`);
+}
+photoCollection.push(poolCollection);
+
+let playgroundCollection = [];
+
+for (let i = 1; i <= 48; i++) {
+  playgroundCollection.push(`./assets/playground/pg${i}.jpg`);
+}
+photoCollection.push(playgroundCollection);
+
+let snackCollection = [];
+
+for (let i = 1; i <= 16; i++) {
+  snackCollection.push(`./assets/snack/snack${i}.jpg`);
+}
+photoCollection.push(snackCollection);
+
+let grillCollection = [];
+
+for (let i = 1; i <= 7; i++) {
+  grillCollection.push(`./assets/grill/gl${i}.jpg`);
+}
+photoCollection.push(grillCollection);
+
+let bonfireCollection = [];
+
+for (let i = 1; i <= 7; i++) {
+  bonfireCollection.push(`./assets/bonfire/bf${i}.jpg`);
+}
+photoCollection.push(bonfireCollection);
+
+let farmCollection = [];
+
+for (let i = 1; i <= 4; i++) {
+  farmCollection.push(`./assets/farm/mf${i}.jpg`);
+}
+photoCollection.push(farmCollection);
+
 let titleCollection = [
   {
     name: "Overview",
@@ -202,20 +245,23 @@ const mobileSelect = document.getElementById("mobileSelect");
 mobileSelect.addEventListener("change", () => {
   changePics(Number(mobileSelect.value));
 });
+
 function changePics(index) {
   let title = document.getElementById("galleryTitle") || null;
   let icon = document.getElementById("gallerySvg") || null;
   title.innerHTML = titleCollection[index].name;
   icon.innerHTML = titleCollection[index].svg;
+  let pElements = document.querySelectorAll(".anchor-div p");
+  pElements.forEach((p) => p.classList.remove("text-primary"));
+  pElements[index].classList.add("text-primary");
 
   container.innerHTML = "";
   currentIndex = index;
   currentIndex2 = index;
   photoCollection[index].forEach((photo, idx) => {
     const picBtn = document.createElement("button");
-    picBtn.className = [
-      "w-28 h-28 md:w-36 md:h-36 overflow-hidden cursor-pointer",
-    ];
+    picBtn.className =
+      "w-28 h-28 md:w-36 md:h-36 overflow-hidden cursor-pointer rounded-sm";
     picBtn.addEventListener("click", () => {
       currentPhotoIndex = idx;
       currentPhotoIndex2 = idx;
@@ -229,9 +275,8 @@ function changePics(index) {
     const img = document.createElement("img");
     img.src = photo;
     img.alt = `Photo ${idx}`;
-    img.className = [
-      "h-full w-full object-cover transform transition duration-500 hover:scale-125",
-    ];
+    img.className =
+      "h-full w-full object-cover transform transition duration-500 hover:scale-125";
     picBtn.appendChild(img);
     container.appendChild(picBtn);
   });
