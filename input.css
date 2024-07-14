@@ -24,8 +24,30 @@
       opacity: 1;
     }
   }
-
-  .animate-slide-down {
-    animation: slideDown 0.5s ease-out forwards;
+  .animate-slide-left {
+    animation: slideLeft 0.5s ease-out forwards;
+  }
+  .animate-slide-left-delay {
+    visibility: hidden; /* Hide the element initially */
+    animation: slideLeftDelay 0.5s ease-out 0.5s forwards; /* Delay animation */
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-40%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideLeftDelay {
+    0% {
+      visibility: visible; /* Make visible at the start of the animation */
+      transform: translateX(-20%);
+    }
+    100% {
+      visibility: visible;
+      transform: translateX(0);
+    }
   }
 }
